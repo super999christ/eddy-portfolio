@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { Avatar, Button, Stack, Typography, useColorScheme } from "@mui/joy";
+import { Avatar, Button, Stack, Typography, useColorScheme, Card, CardOverflow } from "@mui/joy";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoReaderOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -55,6 +55,41 @@ export default function Header() {
             },
       })}
     >
+      {/* Professional Photo */}
+      <Card
+        variant="outlined"
+        sx={{
+          width: mobile ? "200px" : "250px",
+          height: mobile ? "200px" : "250px",
+          borderRadius: "50%",
+          overflow: "hidden",
+          border: "3px solid",
+          borderColor: "primary.500",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
+          transition: "all 0.3s ease",
+          "&:hover": {
+            transform: "scale(1.05)",
+            boxShadow: "0 12px 40px rgba(0,0,0,0.2)",
+          }
+        }}
+      >
+        <CardOverflow>
+          <img
+            src="/src/assets/profile-photo.jpg"
+            alt="Chassity Nakamura - Staff Software Engineer"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+            onError={(e) => {
+              // Fallback to a placeholder or default avatar
+              e.currentTarget.style.display = "none";
+            }}
+          />
+        </CardOverflow>
+      </Card>
       <Button
         size="lg"
         component={Link}

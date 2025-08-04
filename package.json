@@ -1,12 +1,12 @@
 {
-  "name": "bsodium.fr",
+  "name": "chassity-nakamura-portfolio",
   "version": "1.0.0",
   "license": "GPL-2.0-only",
-  "author": "BSoDium",
-  "url": "https://www.bsodium.fr",
+  "author": "Chassity Nakamura",
+  "url": "https://www.chassitynakamura.com",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "lint": "eslint src",
     "build": "tsc -b && yarn lint && vite build",
     "preview": "vite preview",

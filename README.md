@@ -1,8 +1,8 @@
-# bsodium.fr
+# Chassity Nakamura - Portfolio
 
 ## Overview
 
-This repository contains the source code of my eportfolio, a React progressive web app which showcases my skills and projects. It is based on *MUI Joy* for UI components, *React Spring* for animations and *DALL-E 3* for illustration generation. Feel free to check out the latest production deployment at https://bsodium.fr.
+This repository contains the source code of my professional portfolio, a React progressive web app which showcases my skills, projects, and 11+ years of experience as a Staff Software Engineer. It is based on *MUI Joy* for UI components, *React Spring* for animations, and features a modern, responsive design. Feel free to check out the latest production deployment at https://www.chassitynakamura.com.
 
 This project is available for free as a proof of concept and source of inspiration, and was by design tailored to my personal needs. However, its generic structure and components could technically allow anyone to make it their own.
 
@@ -24,7 +24,7 @@ To run the app locally, you need to have Node.js and yarn installed on your mach
 
 ```shell
 yarn install # install dependencies
-yarn start # start development server
+yarn run dev --host # start development server
 ```
 
 In its default configuration, the app should be available at http://localhost:3000.
