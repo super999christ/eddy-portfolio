@@ -136,7 +136,7 @@ function ProjectCard({
         }}
       >
         <Stack direction="row" gap={1.5} alignItems="center">
-          <Avatar
+          {/* <Avatar
             component="span"
             variant="soft"
             size="md"
@@ -144,13 +144,14 @@ function ProjectCard({
             sx={{ borderRadius: "8px" }}
           >
             {platformDetails[project.platform].icon({ size: "1.2rem" })}
-          </Avatar>
-          <Stack gap={0.5} flex={1}>
+          </Avatar> */}
+          <Stack gap={2} flex={1}>
             <Typography level="h3" fontSize="1.25rem" lineHeight={1.2}>
               {project.title}
             </Typography>
             <Typography level="body3" textColor="text.tertiary">
-              {platformDetails[project.platform].sublabel}
+              {/* {platformDetails[project.platform].sublabel} */}
+              "Description"
             </Typography>
           </Stack>
         </Stack>
@@ -168,7 +169,7 @@ function ProjectCard({
         </Typography>
 
         {/* Project Stats */}
-        {project.interactions && Object.keys(project.interactions).length > 0 && (
+        {/* {project.interactions && Object.keys(project.interactions).length > 0 && (
           <Stack direction="row" gap={2} flexWrap="wrap">
             {Object.entries(interactionDetails).map(([key, item]) =>
               project.interactions && Object.keys(project.interactions).includes(key) ? (
@@ -181,12 +182,12 @@ function ProjectCard({
               ) : null
             )}
           </Stack>
-        )}
+        )} */}
 
         {/* Footer info */}
-        <Typography level="body3" textColor="text.tertiary" marginTop="auto">
+        {/* <Typography level="body3" textColor="text.tertiary" marginTop="auto">
           {footer}
-        </Typography>
+        </Typography> */}
 
         {/* Action Links */}
         <Stack direction="row" gap={1.5} flexWrap="wrap">
@@ -204,9 +205,9 @@ function ProjectCard({
               },
             }}
           >
-            View Project →
+            View Project
           </Typography>
-          <Typography
+          {/* <Typography
             component="a"
             href={project.source}
             target="_blank"
@@ -220,7 +221,7 @@ function ProjectCard({
             }}
           >
             Source Code
-          </Typography>
+          </Typography> */}
         </Stack>
       </Stack>
 
@@ -412,7 +413,7 @@ export default function Directory() {
             },
           })}
         />
-        <Select
+        {/* <Select
           placeholder="Filter by platform"
           color="neutral"
           variant="outlined"
@@ -486,7 +487,7 @@ export default function Directory() {
               </Option>
             );
           })}
-        </Select>
+        </Select> */}
         <Button
           size="lg"
           variant="outlined"

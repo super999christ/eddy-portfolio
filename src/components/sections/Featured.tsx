@@ -128,15 +128,15 @@ function ProjectCard({
       </Stack>
       <Stack direction="row" gap={2} justifyContent="space-between">
         <Stack direction="row" gap={2}>
-          <Typography level="body2" startDecorator={<FaStar />}>
+          {/* <Typography level="body2" startDecorator={<FaStar />}>
             {project.interactions?.stars}
           </Typography>
           <Typography level="body2" startDecorator={<FaCodeBranch />}>
             {project.interactions?.forks}
-          </Typography>
+          </Typography> */}
         </Stack>
         <Stack direction="row" gap={1}>
-          <Button
+          {/* <Button
             variant="plain"
             component="a"
             color={color}
@@ -148,7 +148,7 @@ function ProjectCard({
             startDecorator={<RiBracesLine />}
           >
             Code
-          </Button>
+          </Button> */}
           {project.demo && (
             <Button
               component="a"

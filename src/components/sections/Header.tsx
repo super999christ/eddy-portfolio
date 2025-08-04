@@ -75,7 +75,7 @@ export default function Header() {
       >
         <CardOverflow>
           <img
-            src="/src/assets/profile-photo.jpg"
+            src="/src/assets/profile-photo.png"
             alt="Edward Diaz - Staff Software Engineer"
             style={{
               width: "100%",
