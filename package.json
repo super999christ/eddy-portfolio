@@ -1,9 +1,9 @@
 {
-  "name": "chassity-nakamura-portfolio",
+  "name": "edward-diaz-portfolio",
   "version": "1.0.0",
   "license": "GPL-2.0-only",
-  "author": "Chassity Nakamura",
-  "url": "https://www.chassitynakamura.com",
+  "author": "Edward Diaz",
+  "url": "https://www.edwarddiaz.com",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
