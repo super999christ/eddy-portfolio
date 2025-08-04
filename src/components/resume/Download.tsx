@@ -1,18 +1,18 @@
-import { Button, Card, IconButton, Stack, Tooltip, Typography } from "@mui/joy";
-import details from "@/assets/Details";
-import { useMobileMode } from "@/components/Responsive";
-import useOverlayQueryParam from "@/navigation/useOverlayQueryParam";
-import pdf from "@/assets/pdf/resume.pdf";
-import { LuDownload,  LuFileText, LuGlasses } from "react-icons/lu";
+// import { Button, Card, IconButton, Stack, Tooltip, Typography } from "@mui/joy";
+// import details from "@/assets/Details";
+// import { useMobileMode } from "@/components/Responsive";
+// import useOverlayQueryParam from "@/navigation/useOverlayQueryParam";
+// import pdf from "@/assets/pdf/resume.pdf";
+// import { LuDownload,  LuFileText, LuGlasses } from "react-icons/lu";
 
 /**
  * A component that allows the user to download the resume as a PDF.
  */
 export default function Download() {
-  const mobile = useMobileMode();
-  const hidden = useOverlayQueryParam();
+  // const mobile = useMobileMode();
+  // const hidden = useOverlayQueryParam();
 
-  const fileName = `Resume_${details.name.first}_${details.name.last}.pdf`;
+  // const fileName = `Resume_${details.name.first}_${details.name.last}.pdf`;
 
   return (
     // <Stack

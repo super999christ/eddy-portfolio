@@ -1,14 +1,3 @@
-import aauMin from "@/assets/icons/aau.min.webp";
-import aau from "@/assets/icons/aau.webp";
-
-import escapeMin from "@/assets/icons/escape.min.webp";
-import escape from "@/assets/icons/escape.webp";
-import talentyouMin from "@/assets/icons/talentyou.min.webp";
-import talentyou from "@/assets/icons/talentyou.webp";
-import kanopMin from "@/assets/icons/kanop.min.webp";
-import kanop from "@/assets/icons/kanop.webp";
-import lfdcMin from "@/assets/icons/lfdc.min.webp";
-import lfdc from "@/assets/icons/lfdc.webp";
 import startMatter from "@/assets/icons/startmatter.png";
 import huggingFace from "@/assets/icons/huggingface.png";
 import amazon from "@/assets/icons/amazon.png";

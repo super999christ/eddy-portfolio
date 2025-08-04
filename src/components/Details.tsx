@@ -2,7 +2,7 @@ import { Avatar, Chip, Stack, Typography } from "@mui/joy";
 import { animated, useSpringRef, useTransition } from "@react-spring/web";
 import details from "@/assets/Details";
 import ProgressiveImage from "@/components/ProgressiveImage";
-import moment from "moment";
+// import moment from "moment";
 import React, { useEffect } from "react";
 import { BsCode } from "react-icons/bs";
 import { FiPackage } from "react-icons/fi";
@@ -171,19 +171,19 @@ export function Experience({ truncate = false }: { truncate?: boolean }) {
                 })}
               >
                 {items.map((item, subIndex) => {
-                  const startDate = moment(item.start, "MMM YYYY").toDate();
-                  const endDate = moment(
-                    item.end === "Present" ? new Date(Date.now()) : item.end,
-                    "MMM YYYY"
-                  ).toDate();
-                  const momentDuration = moment.duration(
-                    endDate.getTime() - startDate.getTime()
-                  );
-                  const years = momentDuration.years();
-                  const months = momentDuration.months() + 1;
-                  const duration = `${
-                    years > 0 ? `${years} year${years !== 1 ? "s" : ""} ` : ""
-                  }${months} month${months !== 1 ? "s" : ""}`;
+                  // const startDate = moment(item.start, "MMM YYYY").toDate();
+                  // const endDate = moment(
+                  //   item.end === "Present" ? new Date(Date.now()) : item.end,
+                  //   "MMM YYYY"
+                  // ).toDate();
+                  // const momentDuration = moment.duration(
+                  //   endDate.getTime() - startDate.getTime()
+                  // );
+                  // const years = momentDuration.years();
+                  // const months = momentDuration.months() + 1;
+                  // const duration = `${
+                  //   years > 0 ? `${years} year${years !== 1 ? "s" : ""} ` : ""
+                  // }${months} month${months !== 1 ? "s" : ""}`;
                   return (
                     <Stack
                       key={`${item.company}-${item.position}-${item.start}-${item.end}`}

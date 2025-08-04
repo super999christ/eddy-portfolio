@@ -13,11 +13,11 @@ import {
 } from "@mui/joy";
 import React, { useEffect, useState } from "react";
 import { BsJournalCode } from "react-icons/bs";
-import { FaCodeBranch, FaGithub, FaStar } from "react-icons/fa";
+import { FaGithub} from "react-icons/fa";
 import getProjects from "@/utils/Api";
 import { Parallax } from "react-scroll-parallax";
 import { FiArrowRight, FiCode, FiExternalLink } from "react-icons/fi";
-import { RiBracesLine } from "react-icons/ri";
+// import { RiBracesLine } from "react-icons/ri";
 import { Project, rank } from "@/assets/Projects";
 import { Link } from "react-router-dom";
 import { MdErrorOutline } from "react-icons/md";

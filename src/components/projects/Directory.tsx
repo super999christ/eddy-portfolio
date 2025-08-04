@@ -1,29 +1,28 @@
 import {
   Input,
-  Select,
-  Option,
+  // Select,
+  // Option,
   Stack,
   IconButton,
   Button,
   Typography,
-  Avatar,
+  // Avatar,
   Box,
   Divider,
   CircularProgress,
-  Chip,
+  // Chip,
 } from "@mui/joy";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosClose, IoIosSearch, IoIosShuffle } from "react-icons/io";
 import {
-  Interaction,
-  interactionDetails,
-  Platform,
-  platformDetails,
+  // Interaction,
+  // interactionDetails,
+  // Platform,
+  // platformDetails,
   Project,
   rank,
 } from "@/assets/Projects";
 import getProjects from "@/utils/Api";
-import moment from "moment";
 import { CiSearch, CiWifiOff } from "react-icons/ci";
 import { useMobileMode, useTabletMode } from "@/components/Responsive";
 import { GoDownload } from "react-icons/go";
@@ -87,17 +86,17 @@ function ProjectCard({
 }) {
   const mobile = useMobileMode();
 
-  const footer = useMemo(
-    () =>
-      `${project.language ? `${project.language} project ` : "Project "}published to ${platformDetails[project.platform].label}${
-        project.createdAt ? ` ${moment(project.createdAt).fromNow()}` : ""
-      }${
-        project.updatedAt
-          ? `, updated ${moment(project.updatedAt).fromNow()}`
-          : ""
-      }`,
-    [project]
-  );
+  // const footer = useMemo(
+  //   () =>
+  //     `${project.language ? `${project.language} project ` : "Project "}published to ${platformDetails[project.platform].label}${
+  //       project.createdAt ? ` ${moment(project.createdAt).fromNow()}` : ""
+  //     }${
+  //       project.updatedAt
+  //         ? `, updated ${moment(project.updatedAt).fromNow()}`
+  //         : ""
+  //     }`,
+  //   [project]
+  // );
 
   return (
     <Stack
@@ -245,7 +244,7 @@ export default function Directory() {
 
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [search, setSearch] = useState(searchParams.get("search") || "");
-  const [platform, setPlatform] = useState<string | null>(
+  const [platform] = useState<string | null>(
     searchParams.get("platform") || null
   );
 
