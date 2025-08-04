@@ -9,6 +9,11 @@ import kanopMin from "@/assets/icons/kanop.min.webp";
 import kanop from "@/assets/icons/kanop.webp";
 import lfdcMin from "@/assets/icons/lfdc.min.webp";
 import lfdc from "@/assets/icons/lfdc.webp";
+import startMatter from "@/assets/icons/startmatter.png";
+import huggingFace from "@/assets/icons/huggingface.png";
+import amazon from "@/assets/icons/amazon.png";
+import microsoft from "@/assets/icons/microsoft.png";
+import nsu from "@/assets/icons/nsu.png";
 
 const details = {
   name: {
@@ -22,8 +27,8 @@ const details = {
     {
       school: "National University of Singapore",
       url: "https://www.nus.edu.sg/",
-      icon: aau,
-      iconMin: aauMin,
+      icon: nsu,
+      iconMin: nsu,
       location: "Singapore",
       degree: "Master of Computing (Computer Science Specialisation)",
       major: "Computer Science",
@@ -34,8 +39,8 @@ const details = {
     {
       school: "National University of Singapore",
       url: "https://www.nus.edu.sg/",
-      icon: aau,
-      iconMin: aauMin,
+      icon: nsu,
+      iconMin: nsu,
       location: "Singapore",
       degree: "Bachelor of Computing (Computer Science)",
       major: "Computer Science",
@@ -47,13 +52,13 @@ const details = {
     {
       company: "Start Matter",
       url: "https://www.startmatter.com/",
-      icon: kanop,
-      iconMin: kanopMin,
+      icon: startMatter,
+      iconMin: startMatter,
       location: "Kent, United States",
       contract: "Remote",
       position: "Staff Software Engineer",
-      start: "Date period",
-      end: "Current",
+      start: "08/2024",
+      end: "07/2025",
       description: [
         "Spearheaded architecture of end-to-end web and mobile solutions for fintech, legaltech, and martech startups",
         "Developed secure, scalable APIs and infrastructure using Node.js, AWS Lambda, and DynamoDB, improving platform performance by 45%",
@@ -74,13 +79,13 @@ const details = {
     {
       company: "Hugging Face",
       url: "https://huggingface.co/",
-      icon: talentyou,
-      iconMin: talentyouMin,
+      icon: huggingFace,
+      iconMin: huggingFace,
       location: "New York, United States", 
       contract: "Hybrid",
       position: "Senior Software Engineer",
-      start: "Date period",
-      end: "Date period",
+      start: "01/2021",
+      end: "07/2024",
       description: [
         "Contributed to the development of the Hugging Face Hub, scaling dataset and model hosting infrastructure to serve millions of global ML practitioners",
         "Engineered backend APIs for Transformers and Datasets libraries, enabling faster experimentation with NLP, audio, and vision models",
@@ -101,13 +106,13 @@ const details = {
     {
       company: "Amazon",
       url: "https://www.amazon.com/",
-      icon: escape,
-      iconMin: escapeMin,
+      icon: amazon,
+      iconMin: amazon,
       location: "New York, United States",
       contract: "Onsite", 
       position: "Software Engineer",
-      start: "Date period",
-      end: "Date period",
+      start: "11/2017",
+      end: "12/2020",
       description: [
         "Developed backend microservices for Alexa and Echo device integrations, enabling seamless voice control features across apps and services",
         "Worked on scaling and feature delivery for Fire TV platforms, contributing to UI enhancements and content recommendations across regional markets",
@@ -127,8 +132,8 @@ const details = {
     {
       company: "Microsoft",
       url: "https://www.microsoft.com/",
-      icon: lfdc,
-      iconMin: lfdcMin,
+      icon: microsoft,
+      iconMin: microsoft,
       location: "New York, United States",
       contract: "Onsite",
       position: "Software Developer", 
@@ -154,13 +159,13 @@ const details = {
   languages: [
     {
       name: "English",
-      level: "C2",
+      level: "E",
       native: true,
     },
-    {
-      name: "Japanese",
-      level: "B2",
-    },
+    // {
+    //   name: "Japanese",
+    //   level: "B2",
+    // },
   ],
   contact: {
     location: "Kent, WA 98042",

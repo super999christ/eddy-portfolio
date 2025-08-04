@@ -226,12 +226,12 @@ export function Experience({ truncate = false }: { truncate?: boolean }) {
                               >
                                 {item.start} - {item.end}
                               </Typography>
-                              <Typography
+                              {/* <Typography
                                 level="body2"
                                 textColor="text.tertiary"
                               >
                                 {` (${duration})`}
-                              </Typography>
+                              </Typography> */}
                             </>
                           )}
                         </Typography>

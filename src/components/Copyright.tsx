@@ -43,7 +43,7 @@ export default function Copyright() {
         overflow: "auto",
       })}
     >
-      <Typography
+      {/* <Typography
         level="body2"
         sx={{
           whiteSpace: "nowrap",
@@ -62,7 +62,7 @@ export default function Copyright() {
           code
         </Link>
         .
-      </Typography>
+      </Typography> */}
     </Card>
   );
 }

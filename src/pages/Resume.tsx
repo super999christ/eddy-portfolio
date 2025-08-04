@@ -139,8 +139,8 @@ export default function Resume() {
                 {[
                   { key: "location", label: "Location" },
                   { key: "email", label: "Email" },
-                  { key: "phone", label: "Phone" },
-                  { key: "website", label: "Website" },
+                  // { key: "phone", label: "Phone" },
+                  // { key: "website", label: "Website" },
                 ].map(({ key, label }) => {
                   const value =
                     details.contact[key as keyof typeof details.contact];

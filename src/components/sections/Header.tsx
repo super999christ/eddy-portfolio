@@ -203,12 +203,14 @@ export default function Header() {
         The name&apos;s{" "}
         <ATypography
           textColor="primary.plainColor"
-          href={details.contact.linkedin}
+          // href={details.contact.linkedin}
         >
           {`${details.name.first} ${details.name.last}`}
         </ATypography>{" "}
         , but you can call me{" "}
-        <ATypography href={details.contact.github}>
+        <ATypography 
+          // href={details.contact.github}
+        >
           {details.name.nickname}
         </ATypography>
         . I&apos;m a{" "}
@@ -223,8 +225,8 @@ export default function Header() {
             &nbsp;
           </>
         ) : null}
-        and an <Typography textColor="text.primary">Open-source</Typography>{" "}
-        enthusiast.
+        and a <Typography textColor="text.primary">Startup</Typography>{" "}
+        Veteran.
       </Typography>
     </Stack>
   );
