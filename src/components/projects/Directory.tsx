@@ -24,11 +24,11 @@ import {
 } from "@/assets/Projects";
 import getProjects from "@/utils/Api";
 import moment from "moment";
-import { FiCode, FiFile, FiPlay } from "react-icons/fi";
 import { CiSearch, CiWifiOff } from "react-icons/ci";
 import { useMobileMode, useTabletMode } from "@/components/Responsive";
 import { GoDownload } from "react-icons/go";
 import { useSearchParams } from "react-router-dom";
+import ProjectImageCarousel from "./ProjectImageCarousel";
 
 function Message({
   children,
@@ -85,13 +85,11 @@ function ProjectCard({
   open: boolean;
   onClick: () => void;
 }) {
-  const [pressed, setPressed] = useState(false);
-
   const mobile = useMobileMode();
 
   const footer = useMemo(
     () =>
-      `published to ${platformDetails[project.platform].label}${
+      `${project.language ? `${project.language} project ` : "Project "}published to ${platformDetails[project.platform].label}${
         project.createdAt ? ` ${moment(project.createdAt).fromNow()}` : ""
       }${
         project.updatedAt
@@ -105,252 +103,132 @@ function ProjectCard({
     <Stack
       id={project.title}
       direction={mobile ? "column" : "row"}
-      padding={2}
-      gap={2}
+      padding={3}
+      gap={3}
       onClick={() => onClick()}
-      onMouseDown={() => setPressed(true)}
-      onMouseUp={() => setPressed(false)}
-      className={`${open ? "open" : ""} ${pressed ? "pressed" : ""}`}
+      className={`${open ? "open" : ""}`}
       alignItems="stretch"
-      flexWrap="wrap"
       sx={(theme) => ({
-        willChange: "filter",
-        transition: "all ease .2s",
+        transition: "all ease .3s",
         position: "relative",
         cursor: "pointer",
-        borderRadius: "1rem",
-        backgroundColor: theme.palette.background.body,
-        border: "1px solid transparent",
+        borderRadius: "16px",
+        backgroundColor: theme.palette.background.surface,
+        border: "1px solid",
+        borderColor: theme.palette.divider,
         overflow: "hidden",
-        "&:hover, &.open, &.pressed": {
-          zIndex: 1,
-          border: `1px solid ${theme.palette.text.primary}`,
-          filter: `drop-shadow(0 .4rem 0 ${theme.palette.text.primary})`,
-          transform: "translateY(-.4rem)",
-          "&:after": {
-            content: '""',
-            position: "absolute",
-            bottom: "-.4rem",
-            left: 0,
-            width: "100%",
-            height: ".4rem",
-            backgroundColor: "transparent",
-          },
-          "& .illustration": {
-            opacity: 0.8,
-          },
-
-          "& .icon": {
-            backgroundColor: theme.palette.text.primary,
-            color: theme.palette.background.level1,
-          },
-
-          "& + hr": {
-            display: "none",
-          },
+        "&:hover, &.open": {
+          borderColor: theme.palette.primary[500],
+          boxShadow: theme.shadow.lg,
+          transform: "translateY(-2px)",
         },
         "&.open": {
-          marginY: ".8rem",
-        },
-        "&.pressed": {
-          filter: `drop-shadow(0 .2rem 0 ${theme.palette.text.primary})`,
-          transform: "translateY(-.2rem)",
+          marginY: "1rem",
         },
       })}
     >
-      <Stack direction={mobile ? "row" : "column"} gap={mobile ? 2 : 1}>
-        <Avatar
-          component="span"
-          className="icon"
-          variant="plain"
-          size="md"
-          sx={{ borderRadius: ".5rem", transition: "all ease .2s", zIndex: 1 }}
-        >
-          {platformDetails[project.platform].icon({ size: "1.3rem" })}
-        </Avatar>
-        <Stack
-          component="div"
-          className={`interactions${open ? " open" : ""}`}
-          direction={mobile ? "row" : "column"}
-          gap={mobile ? 2 : 1}
-          sx={{
-            transition: "all ease .4s",
-            opacity: 0,
-            maxHeight: 0,
-            transform: `${
-              mobile ? "translateX(-100%)" : "translateY(-100%)"
-            } scale(.8)`,
-            "&.open": {
-              opacity: 1,
-              maxHeight: "100vmax",
-              transform: `${
-                mobile ? "translateX(0)" : "translateY(0)"
-              } translateY(0) scale(1)`,
-            },
-          }}
-        >
-          {Object.entries(interactionDetails).map(([key, item]) =>
-            project.interactions !== undefined &&
-            Object.keys(project.interactions).includes(key) ? (
-              <Stack
-                direction={mobile ? "row" : "column"}
-                key={key}
-                alignItems="center"
-              >
-                <Stack
-                  direction={mobile ? "row" : "column"}
-                  alignItems="center"
-                  gap={0.8}
-                  sx={{
-                    fontSize: mobile ? "1rem" : "0.8rem",
-                    padding: ".3rem .1rem",
-                    lineHeight: 0.9,
-                  }}
-                >
-                  {item.icon({})}
-                  <span style={{ fontSize: "0.9em" }}>
-                    {project.interactions[key as Interaction]}
-                  </span>
-                </Stack>
-              </Stack>
-            ) : null
-          )}
-        </Stack>
-      </Stack>
-
+      {/* Left side - Project Info */}
       <Stack
-        zIndex={1}
-        gap={0.5}
+        gap={2}
         flex={1}
         sx={{
-          minWidth: "min(100%, 20rem)",
+          minWidth: mobile ? "100%" : "300px",
         }}
       >
-        <Typography level="h3" alignItems="baseline">
-          {project.title}
-          <Typography textColor="text.tertiary" fontWeight="300" marginLeft={1}>
-            {platformDetails[project.platform].sublabel.toLocaleLowerCase()}
-          </Typography>
-        </Typography>
+        <Stack direction="row" gap={1.5} alignItems="center">
+          <Avatar
+            component="span"
+            variant="soft"
+            size="md"
+            color="primary"
+            sx={{ borderRadius: "8px" }}
+          >
+            {platformDetails[project.platform].icon({ size: "1.2rem" })}
+          </Avatar>
+          <Stack gap={0.5} flex={1}>
+            <Typography level="h3" fontSize="1.25rem" lineHeight={1.2}>
+              {project.title}
+            </Typography>
+            <Typography level="body3" textColor="text.tertiary">
+              {platformDetails[project.platform].sublabel}
+            </Typography>
+          </Stack>
+        </Stack>
+
         <Typography
           level="body2"
           sx={{
-            flex: 1,
+            lineHeight: 1.6,
             "& p": {
               margin: 0,
             },
           }}
         >
-          <span
-            dangerouslySetInnerHTML={{ __html: project.description || "" }}
-          />
+          {project.description}
         </Typography>
-        <Typography level="body3" marginTop={1}>
-          {project.language ? (
-            <>
-              <Typography textColor="text.primary">
-                {project.language}
-              </Typography>
-              {" project "}
-            </>
-          ) : (
-            "Project "
-          )}
+
+        {/* Project Stats */}
+        {project.interactions && Object.keys(project.interactions).length > 0 && (
+          <Stack direction="row" gap={2} flexWrap="wrap">
+            {Object.entries(interactionDetails).map(([key, item]) =>
+              project.interactions && Object.keys(project.interactions).includes(key) ? (
+                <Stack direction="row" key={key} alignItems="center" gap={0.5}>
+                  {item.icon({ size: "14px" })}
+                  <Typography level="body3" fontWeight="md">
+                    {project.interactions[key as Interaction]}
+                  </Typography>
+                </Stack>
+              ) : null
+            )}
+          </Stack>
+        )}
+
+        {/* Footer info */}
+        <Typography level="body3" textColor="text.tertiary" marginTop="auto">
           {footer}
         </Typography>
-      </Stack>
-      <Stack
-        direction="row"
-        zIndex={1}
-        gap={1}
-        alignItems="start"
-        marginTop={mobile ? ".5rem" : "initial"}
-        justifyContent={mobile ? "end" : "initial"}
-        width={mobile ? "100%" : "initial"}
-      >
-        <Button
-          component="a"
-          href={project.source}
-          target="_blank"
-          size={mobile ? "md" : "sm"}
-          color="neutral"
-          variant="outlined"
-          sx={(theme) => ({
-            transition: "all ease .2s, height ease .4s",
-            borderRadius: ".5rem",
-            width: "fit-content",
-            flexShrink: 0,
-            padding: "1 2",
-            background: theme.palette.background.body,
 
-            "&:hover": {
-              background: theme.palette.text.primary,
-              color: theme.palette.background.level1,
-              borderColor: theme.palette.text.primary,
-            },
-            "&:active": {
-              transform: "scale(.98)",
-            },
-          })}
-          startDecorator={
-            project.language !== undefined ? <FiCode /> : <FiFile />
-          }
-        >
-          {project.language !== undefined ? "Explore source" : "Show project"}
-        </Button>
-        {project.demo && (
-          <Button
+        {/* Action Links */}
+        <Stack direction="row" gap={1.5} flexWrap="wrap">
+          <Typography
             component="a"
             href={project.demo}
             target="_blank"
-            size={mobile ? "md" : "sm"}
-            color="neutral"
-            variant="outlined"
-            sx={(theme) => ({
-              transition: "all ease .2s",
-              borderRadius: ".5rem",
-              width: "fit-content",
-              flexShrink: 0,
-              padding: "1 2",
-
-              borderColor: theme.palette.text.primary,
-              background: theme.palette.text.primary,
-              color: theme.palette.background.level1,
+            level="body2"
+            fontWeight="md"
+            textColor="primary.500"
+            sx={{
+              textDecoration: "none",
               "&:hover": {
-                backgroundColor: theme.palette.background.body,
-                color: theme.palette.text.primary,
+                textDecoration: "underline",
               },
-              "&:active": {
-                transform: "scale(.98)",
-              },
-            })}
-            startDecorator={<FiPlay />}
+            }}
           >
-            Run demo
-          </Button>
-        )}
+            View Project →
+          </Typography>
+          <Typography
+            component="a"
+            href={project.source}
+            target="_blank"
+            level="body2"
+            textColor="text.secondary"
+            sx={{
+              textDecoration: "none",
+              "&:hover": {
+                textDecoration: "underline",
+              },
+            }}
+          >
+            Source Code
+          </Typography>
+        </Stack>
       </Stack>
-      {project.thumbnail && (
-        <Box
-          component="img"
-          src={project.thumbnail}
-          alt={project.title}
-          className="illustration"
-          sx={{
-            transition: "all ease .2s",
-            position: "absolute",
-            minHeight: "100%",
-            minWidth: "61%",
-            left: "40%",
-            top: "50%",
-            WebkitMaskImage:
-              "linear-gradient(to left,black 10%,transparent 80%)",
-            maskImage: "linear-gradient(to left,black 10%,transparent 80%)",
-            opacity: 0,
-            filter: "blur(5px)",
-            transform: "translateY(-50%)",
-          }}
-        />
+
+      {/* Right side - Image Carousel */}
+      {project.images && project.images.length > 0 && (
+        <Box sx={{ flex: mobile ? "none" : 1 }}>
+          <ProjectImageCarousel images={project.images} title={project.title} />
+        </Box>
       )}
     </Stack>
   );

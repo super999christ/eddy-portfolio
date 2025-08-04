@@ -1,12 +1,12 @@
 import { Project } from "@/assets/Projects";
-import axios from "axios";
+import projectsData from "@/assets/ProjectsData";
 
-const instance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
-});
-
-export default async function getProjects() {
-  return instance
-    .get<Project[] | undefined>("/api/featured")
-    .then((res) => (typeof res.data === "object" ? res.data : undefined));
+export default async function getProjects(): Promise<Project[]> {
+  // Return the local project data instead of fetching from external API
+  return new Promise((resolve) => {
+    // Simulate a brief delay to match the expected async behavior
+    setTimeout(() => {
+      resolve(projectsData);
+    }, 100);
+  });
 }

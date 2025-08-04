@@ -51,6 +51,7 @@ export interface Project {
   title: string;
   description?: string;
   thumbnail?: string;
+  images?: string[]; // Array of project images for gallery
   source: string;
   demo?: string;
   language?: string;
