@@ -8,6 +8,7 @@ import greetingFactory from "@/utils/Greeting";
 import { ATypography } from "@/pages/Landing";
 import details from "@/assets/Details";
 import { useMobileMode } from "@/components/Responsive";
+import profileImage from "@/assets/profile-photo.png";
 
 export const visitors = [
   "stranger",
@@ -75,7 +76,7 @@ export default function Header() {
       >
         <CardOverflow>
           <img
-            src="/src/assets/profile-photo.png"
+            src={profileImage}
             alt="Edward Diaz - Staff Software Engineer"
             style={{
               width: "100%",
