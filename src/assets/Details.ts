@@ -47,7 +47,7 @@ const details = {
       contract: "Remote",
       position: "Staff Software Engineer",
       start: "08/2024",
-      end: "07/2025",
+      end: "11/2025",
       description: [
         "Spearheaded architecture of end-to-end web and mobile solutions for fintech, legaltech, and martech startups",
         "Developed secure, scalable APIs and infrastructure using Node.js, AWS Lambda, and DynamoDB, improving platform performance by 45%",

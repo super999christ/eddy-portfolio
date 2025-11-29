@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the source code of my professional portfolio, a React progressive web app which showcases my skills, projects, and over 9 years of experience as a Staff Software Engineer. It is based on *MUI Joy* for UI components, *React Spring* for animations, and features a modern, responsive design. Feel free to check out the latest production deployment at https://www.edwarddiaz.com.
+This repository contains the source code of my professional portfolio, a React progressive web app which showcases my skills, projects, and over 10 years of experience as a Staff Software Engineer. It is based on *MUI Joy* for UI components, *React Spring* for animations, and features a modern, responsive design. Feel free to check out the latest production deployment at https://www.edwarddiaz.com.
 
 This project is available for free as a proof of concept and source of inspiration, and was by design tailored to my personal needs. However, its generic structure and components could technically allow anyone to make it their own.
 
