@@ -60,6 +60,7 @@ export default function Header() {
       <Card
         variant="outlined"
         sx={{
+          position: "relative",
           width: mobile ? "200px" : "250px",
           height: mobile ? "200px" : "250px",
           borderRadius: "50%",
@@ -74,18 +75,26 @@ export default function Header() {
           }
         }}
       >
-        <CardOverflow>
+        <CardOverflow
+          sx={{
+            margin: 0,
+            padding: 0,
+            height: "100%",
+          }}
+        >
           <img
             src={profileImage}
-            alt="Edward Diaz - Staff Software Engineer"
+            alt="Ed Diaz - Senior Software Engineer"
             style={{
-              width: "100%",
-              height: "100%",
+              position: "absolute",
+              top: "-10%",
+              left: "-10%",
+              width: "120%",
+              height: "120%",
               objectFit: "cover",
-              objectPosition: "center",
+              objectPosition: "center top",
             }}
             onError={(e) => {
-              // Fallback to a placeholder or default avatar
               e.currentTarget.style.display = "none";
             }}
           />

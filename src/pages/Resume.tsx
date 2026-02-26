@@ -198,7 +198,7 @@ export default function Resume() {
                   Work experience
                 </Typography>
                 <Divider />
-                <Experience truncate />
+                <Experience />
               </Stack>
 
               <Stack gap={1}>

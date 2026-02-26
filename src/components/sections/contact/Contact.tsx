@@ -1,5 +1,5 @@
 import { Avatar, Stack, Typography } from "@mui/joy";
-import { FaDeviantart, FaGithub, FaGitlab, FaLinkedin } from "react-icons/fa";
+import { FaDeviantart, FaGitlab } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
 import { SiResearchgate } from "react-icons/si";
 import details from "@/assets/Details";
@@ -98,37 +98,37 @@ export default function Contact() {
             title: "Phone",
             color: "#4285f4",
           },
-          {
-            url: details.contact.linkedin,
-            icon: <FaLinkedin />,
-            title: "LinkedIn",
-            color: "#0a66c2",
-          },
-          {
-            url: details.contact.github,
-            icon: <FaGithub />,
-            title: "GitHub",
-            color: "#E6EDF3",
-          },
-          {
+          // {
+          //   url: details.contact.linkedin,
+          //   icon: <FaLinkedin />,
+          //   title: "LinkedIn",
+          //   color: "#0a66c2",
+          // },
+          // {
+          //   url: details.contact.github,
+          //   icon: <FaGithub />,
+          //   title: "GitHub",
+          //   color: "#E6EDF3",
+          // },
+          details.contact.gitlab && {
             url: details.contact.gitlab,
             icon: <FaGitlab />,
             title: "GitLab",
             color: "#fc6d26",
           },
-          {
+          details.contact.deviantart && {
             url: details.contact.deviantart,
             icon: <FaDeviantart />,
             title: "DeviantArt",
             color: "#00E59B",
           },
-          {
+          details.contact.researchgate && {
             url: details.contact.researchgate,
             icon: <SiResearchgate />,
             title: "ResearchGate",
             color: "#1fada2",
           },
-        ]}
+        ].filter(Boolean) as Parameters<typeof LinkCarousel>[0]["links"]}
       />
     </Stack>
   );

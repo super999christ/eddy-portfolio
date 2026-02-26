@@ -255,19 +255,20 @@ export function Experience({ truncate = false }: { truncate?: boolean }) {
                               {item.start} - {item.end}
                             </Typography>
                           ) : (
-                            <Typography
-                              level="body2"
-                              component="span"
-                              textColor="text.secondary"
-                            >
-                              {" "}
-                              {item.contract} - {item.location}
-                            </Typography>
+                            // <Typography
+                            //   level="body2"
+                            //   component="span"
+                            //   textColor="text.secondary"
+                            // >
+                            //   {" "}
+                            //   {item.contract} - {item.location}
+                            // </Typography>
+                            null
                           )}
                         </Typography>
                       </Stack>
                       <Stack gap={0.25}>
-                        {items.length > 1 && (
+                        {/* {items.length > 1 && (
                           <Typography
                             level="body2"
                             textColor="text.secondary"
@@ -275,7 +276,7 @@ export function Experience({ truncate = false }: { truncate?: boolean }) {
                           >
                             {item.contract} - {item.location}
                           </Typography>
-                        )}
+                        )} */}
                         <Stack
                           direction="row"
                           alignItems="start"
