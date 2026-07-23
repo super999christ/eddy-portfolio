@@ -100,7 +100,7 @@ import otto3 from './projects/otto-3.png';
 import otto4 from './projects/otto-4.png';
 
 export const projectsData: Project[] = [
-  // ── FravityAI (10/2024 – 02/2026) ──────────────────────────────────────────
+  // ── FravityAI (10/2024 – 07/2026) ──────────────────────────────────────────
   {
     title: "AI Investigation Copilot",
     description: "End-to-end AI copilot for fraud and AML investigation teams built at FravityAI. Shipped React/Next.js + TypeScript front-end with Python FastAPI back-end, wiring OpenAI and Claude APIs through LangChain orchestration. Integrated pgvector retrieval so investigators can surface similar historical cases in sub-second p95 latency. Eval harnesses (RAGAS + custom scorers) and Rollbar/Sentry telemetry keep model quality measurable in production.",

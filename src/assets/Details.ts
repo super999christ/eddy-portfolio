@@ -63,7 +63,7 @@ const details = {
       contract: "Remote",
       position: "Sr Software Engineer",
       start: "10/2024",
-      end: "02/2026",
+      end: "07/2026",
       description: [
         "Built and shipped AI product features end-to-end (React/Next.js + TypeScript, Python, Postgres) with rapid customer-driven iteration",
         "Productionized LLM workflows (OpenAI/Claude APIs/Cerebras) with retrieval (pgvector/Pinecone), evaluation harnesses, and telemetry (Rollbar/Sentry)",
@@ -202,10 +202,10 @@ const details = {
   contact: {
     location: "Seattle, WA 98116",
     email: "eddydiaz0219@gmail.com",
-    phone: "+14252705400",
-    website: "https://www.eddiaz.dev",
-    linkedin: "https://www.linkedin.com/in/eddydiaz/",
-    github: "https://www.github.com/eddydiaz",
+    phone: "+14253588549",
+    website: "https://ed-diaz.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/eddi-diaz",
+    github: "https://github.com/diazeddy/dataset-api",
     gitlab: "",
     deviantart: "",
     researchgate: "",
