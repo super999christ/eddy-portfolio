@@ -8,11 +8,10 @@ import {
   Typography,
   // Avatar,
   Box,
-  Divider,
   CircularProgress,
   // Chip,
 } from "@mui/joy";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosClose, IoIosSearch, IoIosShuffle } from "react-icons/io";
 import {
   // Interaction,
@@ -148,10 +147,10 @@ function ProjectCard({
             <Typography level="h3" fontSize="1.25rem" lineHeight={1.2}>
               {project.title}
             </Typography>
-            <Typography level="body3" textColor="text.tertiary">
-              {/* {platformDetails[project.platform].sublabel} */}
+            {/* <Typography level="body3" textColor="text.tertiary">
+              {platformDetails[project.platform].sublabel}
               "Description"
-            </Typography>
+            </Typography> */}
           </Stack>
         </Stack>
 
@@ -189,7 +188,7 @@ function ProjectCard({
         </Typography> */}
 
         {/* Action Links */}
-        <Stack direction="row" gap={1.5} flexWrap="wrap">
+        {/* <Stack direction="row" gap={1.5} flexWrap="wrap">
           <Typography
             component="a"
             href={project.demo}
@@ -206,7 +205,7 @@ function ProjectCard({
           >
             View Project
           </Typography>
-          {/* <Typography
+          <Typography
             component="a"
             href={project.source}
             target="_blank"
@@ -220,8 +219,8 @@ function ProjectCard({
             }}
           >
             Source Code
-          </Typography> */}
-        </Stack>
+          </Typography>
+        </Stack> */}
       </Stack>
 
       {/* Right side - Image Carousel */}
@@ -522,7 +521,7 @@ export default function Directory() {
           Randomize
         </Button>
       </Stack>
-      <Stack paddingBlockStart={4}>
+      <Stack paddingBlockStart={4} gap={3}>
         {loading ? (
           <Message
             title="Working on it..."
@@ -537,29 +536,17 @@ export default function Directory() {
             .sort(
               (a, b) => rank(b, filteredProjects) - rank(a, filteredProjects)
             )
-            .map((project, index) => (
-              <React.Fragment
+            .map((project) => (
+              <ProjectCard
                 key={`${project.platform}-${project.title}-${project.source}`}
-              >
-                <ProjectCard
-                  project={project}
-                  open={openProject === project.title}
-                  onClick={() =>
-                    openProject === project.title
-                      ? setOpenProject("")
-                      : setOpenProject(project.title)
-                  }
-                />
-                {index < filteredProjects.length - 1 && (
-                  <Divider
-                    sx={{
-                      "&:has(+ .open)": {
-                        display: "none",
-                      },
-                    }}
-                  />
-                )}
-              </React.Fragment>
+                project={project}
+                open={openProject === project.title}
+                onClick={() =>
+                  openProject === project.title
+                    ? setOpenProject("")
+                    : setOpenProject(project.title)
+                }
+              />
             ))
         )}
         {filteredProjects.length === 0 &&

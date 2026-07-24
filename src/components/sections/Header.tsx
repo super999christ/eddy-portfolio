@@ -238,6 +238,40 @@ export default function Header() {
         and a <Typography textColor="text.primary">Startup</Typography>{" "}
         Veteran.
       </Typography>
+      <Stack
+        direction="row"
+        flexWrap="wrap"
+        columnGap={4}
+        rowGap={1.5}
+        justifyContent={mobile ? "center" : "flex-start"}
+      >
+        {[
+          { key: "location", label: "Location" },
+          { key: "email", label: "Email" },
+          { key: "phone", label: "Phone" },
+        ].map(({ key, label }) => {
+          const value = details.contact[key as keyof typeof details.contact];
+          return (
+            <Stack key={key} textAlign={mobile ? "center" : "left"}>
+              <Typography
+                level="body2"
+                fontWeight="bold"
+                textTransform="capitalize"
+                textColor={dark ? "text.tertiary" : "#3c617b"}
+              >
+                {label}
+              </Typography>
+              <Typography
+                level="body2"
+                textColor={dark ? "text.primary" : "#051825"}
+                sx={{ wordBreak: "break-word" }}
+              >
+                {value}
+              </Typography>
+            </Stack>
+          );
+        })}
+      </Stack>
     </Stack>
   );
 }
