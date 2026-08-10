@@ -61,9 +61,9 @@ const details = {
       iconMin: fravityai as unknown as string,
       location: "Seattle, WA",
       contract: "Remote",
-      position: "Sr Software Engineer",
+      position: "Senior AI Engineer",
       start: "10/2024",
-      end: "07/2026",
+      end: "08/2026",
       description: [
         "Built and shipped AI product features end-to-end (React/Next.js + TypeScript, Python, Postgres) with rapid customer-driven iteration",
         "Productionized LLM workflows (OpenAI/Claude APIs/Cerebras) with retrieval (pgvector/Pinecone), evaluation harnesses, and telemetry (Rollbar/Sentry)",

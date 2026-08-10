@@ -1,5 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import React from "react";
+import PasswordGate from "@/components/PasswordGate";
 import ThemeProvider from "@/components/ThemeProvider";
 
 /**
@@ -9,7 +10,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <React.StrictMode>
       <SpeedInsights />
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider>
+        <PasswordGate>{children}</PasswordGate>
+      </ThemeProvider>
     </React.StrictMode>
   );
 }

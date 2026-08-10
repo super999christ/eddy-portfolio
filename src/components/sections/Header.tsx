@@ -84,7 +84,7 @@ export default function Header() {
         >
           <img
             src={profileImage}
-            alt="Ed Diaz - Senior Software Engineer"
+            alt="Ed Diaz - Senior AI Software Engineer"
             style={{
               position: "absolute",
               top: "-10%",
