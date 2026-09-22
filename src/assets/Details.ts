@@ -26,9 +26,9 @@ const details = {
     last: "Diaz",
     nickname: "ED",
   },
-  title: "Senior Software Engineer",
+  title: "Senior AI Software Engineer",
   biography:
-    "Senior software engineer with **10+ years** across cloud infrastructure, payments, product engineering, and AI. High ownership: ship end-to-end features, improve reliability and performance, and partner closely with product/design. Comfortable in early-stage ambiguity (0→1) and scaling constraints (latency, cost, on-call).\n\n**Core Strengths:** 0→1 product delivery · Full-stack execution (React + APIs + data) · Systems + reliability (SLOs, on-call, observability) · DevOps pragmatism (CI/CD, infra as code, cost) · AI feature shipping (evals, monitoring, guardrails)",
+    "Senior AI Software Engineer with **10+ years** across cloud infrastructure, payments, product engineering, and AI. High ownership: ship end-to-end features, improve reliability and performance, and partner closely with product/design. Comfortable in early-stage ambiguity (0→1) and scaling constraints (latency, cost, on-call).\n\n**Core Strengths:** 0→1 product delivery · Full-stack execution (React + APIs + data) · Systems + reliability (SLOs, on-call, observability) · DevOps pragmatism (CI/CD, infra as code, cost) · AI feature shipping (evals, monitoring, guardrails)",
   education: [
     {
       school: "Osaka University",
@@ -39,7 +39,7 @@ const details = {
       degree: "Master of Science (Computer Science)",
       major: "Computer Science",
       start: "2014",
-      end: "2015",
+      end: "2016",
     },
     {
       school: "Osaka University",
@@ -61,15 +61,15 @@ const details = {
       iconMin: fravityai as unknown as string,
       location: "Seattle, WA",
       contract: "Remote",
-      position: "Senior AI Engineer",
+      position: "Senior AI Software Engineer ",
       start: "10/2024",
-      end: "08/2026",
+      end: "Current",
       description: [
-        "Built and shipped AI product features end-to-end (React/Next.js + TypeScript, Python, Postgres) with rapid customer-driven iteration",
-        "Productionized LLM workflows (OpenAI/Claude APIs/Cerebras) with retrieval (pgvector/Pinecone), evaluation harnesses, and telemetry (Rollbar/Sentry)",
-        "Designed scalable backend services (Python/TypeScript, REST/GraphQL) and async processing (Redis/queues) for secure multi-tenant workloads",
-        "Improved reliability using SLOs, alerting, dashboards (Datadog/Grafana), and incident runbooks; drove root-cause fixes for recurring issues",
-        "Hardened deployment and cost discipline with AWS (ECS/Lambda/S3/RDS), IaC (Terraform/CDK), and CI/CD (GitHub Actions/Jenkins)",
+        "Joined as the second technical hire and built AI product capabilities end-to-end, turning customer feedback into rapid production iterations.",
+        "Productionized LLM workflows with retrieval, evaluation, and telemetry to improve response quality and confidence in production behavior.",
+        "Designed secure, multi-tenant backend services and asynchronous processing for scalable AI workloads.",
+        "Established reliability practices including service objectives, dashboards, alerting, incident runbooks, and root-cause remediation.",
+        "Strengthened deployment automation and cloud cost discipline to support frequent, safe releases as the product scaled."
       ],
       skills: [
         "React/Next.js",
@@ -93,11 +93,11 @@ const details = {
       start: "03/2023",
       end: "09/2024",
       description: [
-        "Delivered MVPs and production features using React + TypeScript and Ruby/Go/Python services with Postgres, balancing speed and maintainability",
-        "Led architecture decisions: API contracts (GraphQL), auth (OAuth/JWT), and data modeling (Postgres/Redis) with pragmatic handoff docs",
-        "Set up deployment pipelines (Docker, GitHub Actions/CircleCI, AWS) to enable safe, frequent releases and rapid rollback strategies",
-        "Improved quality with automated testing (Jest/Playwright/Pytest), code review standards, and observability (Sentry/Datadog)",
-        "Worked closely with founders/PMs/designers to scope and ship increments, applying design-system patterns (Tailwind/component libraries) and WCAG basics",
+        "Delivered MVPs and production features for client products, balancing rapid iteration with maintainability and long-term product quality.",
+        "Led decisions around API contracts, authentication flows, and data modeling while creating pragmatic handoff documentation.",
+        "Improved release safety through deployment automation, rollback strategies, and repeatable delivery practices.",
+        "Raised engineering quality through automated testing, code review standards, and production observability.",
+        "Partnered closely with founders, product managers, and designers to scope increments and ship accessible, polished user experiences."
       ],
       skills: [
         "React",
@@ -121,11 +121,11 @@ const details = {
       start: "05/2021",
       end: "02/2023",
       description: [
-        "Built collaboration-focused product experiences using TypeScript + React, optimizing complex UI state and interaction performance",
-        "Developed backend capabilities (Node.js services, Postgres/Redis) with emphasis on correctness, backwards compatibility, and safe migrations",
-        "Improved performance and reliability via profiling and optimization (tracing, caching), tightening p95 latency on key user actions",
-        "Contributed to internal tooling (monorepo workflows, CI/CD, testing automation) to accelerate shipping while keeping quality high",
-        "Strengthened polish through accessibility and internationalization efforts (WCAG, localization) with close design/product collaboration",
+        "Built collaboration-focused product experiences and optimized complex client-side interactions for responsiveness and performance.", 
+        "Developed backend capabilities supporting product workflows with emphasis on correctness, backward compatibility, and safe migrations.", 
+        "Improved latency on key user actions through profiling, caching, and targeted performance optimization.", 
+        "Contributed to internal tooling and delivery workflows that accelerated shipping while maintaining a high quality bar.", 
+        "Strengthened accessibility and internationalization across product experiences in close collaboration with design and product teams."
       ],
       skills: [
         "TypeScript",
@@ -143,17 +143,17 @@ const details = {
       url: "https://stripe.com/",
       icon: stripe as unknown as string,
       iconMin: stripe as unknown as string,
-      location: "San Francisco, CA",
+      location: "New York, NY",
       contract: "Onsite",
       position: "Software Engineer",
       start: "06/2018",
       end: "04/2021",
       description: [
-        "Built and maintained critical payment services (Python/TypeScript, API design, Postgres) focused on correctness and developer reliability",
-        "Implemented safety patterns across money flows (idempotency, retries, queue-based processing) using event-driven designs and robust tests",
-        "Improved operational excellence with metrics/alerts and incident readiness (Datadog dashboards), contributing on-call learnings to prevention work",
-        "Shipped internal tools and dashboards (React + TypeScript, GraphQL) to improve support and engineering efficiency for customer issues",
-        "Collaborated on secure-by-default design (authn/authz, data handling) while balancing compliance needs with delivery speed",
+        "Built and maintained critical payment-platform capabilities focused on correctness, reliability, and a dependable developer experience.", 
+        "Implemented resilient money-flow patterns including idempotency, retries, and event-driven processing for safer transaction handling.", 
+        "Improved operational readiness with metrics, alerts, dashboards, incident response, and prevention work informed by on-call learnings.", 
+        "Shipped internal tools and support workflows that improved engineering efficiency and customer-issue resolution.", 
+        "Collaborated on secure-by-default designs for authentication, authorization, and sensitive data handling while balancing compliance and delivery speed."
       ],
       skills: [
         "Python",
@@ -166,21 +166,21 @@ const details = {
       ],
     },
     {
-      company: "AWS",
-      url: "https://aws.amazon.com/",
+      company: "Amazon",
+      url: "https://amazon.com/",
       icon: aws,
       iconMin: aws,
-      location: "Seattle, WA",
+      location: "New York, NY",
       contract: "Onsite",
-      position: "Software Development Engineer",
-      start: "06/2015",
+      position: "Associate Software Engineer",
+      start: "04/2016",
       end: "05/2018",
       description: [
-        "Developed and operated cloud backend services (Java/Python, distributed systems) emphasizing scalability, durability, and operational rigor",
-        "Built internal tools and consoles (React/Angular + JavaScript, service APIs) to improve workflows and reduce manual operational work",
-        "Implemented automated infrastructure and deployments (CloudFormation/IaC patterns, CI tooling) enabling repeatable releases and safer changes",
-        "Improved service health via instrumentation, monitoring, and alerting (CloudWatch, metrics/logging) and participated in on-call incident response",
-        "Reduced performance bottlenecks through profiling and optimization (caching strategies, query tuning) under strict latency targets",
+        "Built and maintained backend and customer-facing capabilities for Amazon e-commerce platforms, with emphasis on scale, durability, and reliable transaction flows.", 
+        "Developed internal tools and operational interfaces that reduced manual work and improved day-to-day commerce workflows.", 
+        "Improved deployment automation and release reliability across high-traffic services, enabling safer and more repeatable changes.", 
+        "Strengthened service health through instrumentation, monitoring, incident response, and root-cause remediation.", 
+        "Reduced latency and performance bottlenecks through profiling, caching, and data-access optimization under demanding traffic conditions."
       ],
       skills: [
         "Java",
@@ -201,11 +201,11 @@ const details = {
   ],
   contact: {
     location: "Seattle, WA 98116",
-    email: "eddydiaz0219@gmail.com",
+    email: "itpro-ediaz@proton.me",
     phone: "+14253588549",
     website: "https://ed-diaz.vercel.app/",
-    linkedin: "https://www.linkedin.com/in/eddi-diaz",
-    github: "https://github.com/diazeddy/dataset-api",
+    linkedin: "https://www.linkedin.com/in/edmon-diaz-612940428/",
+    github: "https://www.github.com/diazeddy",
     gitlab: "",
     deviantart: "",
     researchgate: "",

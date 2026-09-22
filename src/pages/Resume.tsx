@@ -140,11 +140,14 @@ export default function Resume() {
                   { key: "location", label: "Location" },
                   { key: "email", label: "Email" },
                   { key: "phone", label: "Phone" },
-                  // { key: "website", label: "Website" },
+                  { key: "linkedin", label: "LinkedIn" },
                 ].map(({ key, label }) => {
                   const value =
                     details.contact[key as keyof typeof details.contact];
-                  const isUrl = value.startsWith("http");
+                  const isUrl =
+                    typeof value === "string" && value.startsWith("http");
+                  const displayValue =
+                    key === "linkedin" && isUrl ? "LinkedIn" : value;
                   return (
                     <Stack key={key}>
                       <Typography
@@ -160,6 +163,7 @@ export default function Resume() {
                           level="body2"
                           href={value}
                           target="_blank"
+                          rel="noopener noreferrer"
                           sx={{
                             wordBreak: "break-word",
                             textDecoration: "none",
@@ -168,7 +172,7 @@ export default function Resume() {
                             },
                           }}
                         >
-                          {value}
+                          {displayValue}
                         </Typography>
                       ) : (
                         <Typography

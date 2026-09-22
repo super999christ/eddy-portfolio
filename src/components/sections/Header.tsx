@@ -249,8 +249,12 @@ export default function Header() {
           { key: "location", label: "Location" },
           { key: "email", label: "Email" },
           { key: "phone", label: "Phone" },
+          { key: "linkedin", label: "LinkedIn" },
         ].map(({ key, label }) => {
           const value = details.contact[key as keyof typeof details.contact];
+          const isUrl = typeof value === "string" && value.startsWith("http");
+          const displayValue =
+            key === "linkedin" && isUrl ? "LinkedIn" : value;
           return (
             <Stack key={key} textAlign={mobile ? "center" : "left"}>
               <Typography
@@ -261,13 +265,33 @@ export default function Header() {
               >
                 {label}
               </Typography>
-              <Typography
-                level="body2"
-                textColor={dark ? "text.primary" : "#051825"}
-                sx={{ wordBreak: "break-word" }}
-              >
-                {value}
-              </Typography>
+              {isUrl ? (
+                <Typography
+                  component="a"
+                  level="body2"
+                  href={value}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  textColor={dark ? "text.primary" : "#051825"}
+                  sx={{
+                    wordBreak: "break-word",
+                    textDecoration: "none",
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  {displayValue}
+                </Typography>
+              ) : (
+                <Typography
+                  level="body2"
+                  textColor={dark ? "text.primary" : "#051825"}
+                  sx={{ wordBreak: "break-word" }}
+                >
+                  {value}
+                </Typography>
+              )}
             </Stack>
           );
         })}
